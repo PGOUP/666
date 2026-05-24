@@ -1,0 +1,7 @@
+{
+  "platforms": ["android"],
+  "name": "clipboard-ime",
+  "android": {
+    "modules": ["expo.modules.clipboardime.ClipboardImeModule"]
+  }
+}

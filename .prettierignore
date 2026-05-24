@@ -1,0 +1,15 @@
+node_modules/
+.expo/
+.expo-shared/
+dist/
+build/
+*.log
+.DS_Store
+coverage/
+android/
+
+# Documentation folders (external skills)
+.claude/
+.ai/
+
+CHANGES.md
