@@ -112,8 +112,6 @@ class ClipboardChangedHandler {
     content: ClipboardContent,
     config: AppConfig
   ): Promise<void> {
-    if (content.type !== 'Text') return;
-
     const autoSyncEnabled = config?.autoSync ?? false;
     const bgDownloadEnabled = !!(config?.enableBackgroundTasks && config?.enableBackgroundDownload);
     const isAppActive = AppState.currentState === 'active';
