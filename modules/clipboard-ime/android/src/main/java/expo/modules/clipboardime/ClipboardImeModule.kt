@@ -39,13 +39,15 @@ class ClipboardImeModule : Module() {
         }
 
         Function("openImeSettings") {
-            val context = appContext.reactContext ?: return@Function
+            val context = appContext.reactContext ?: return@Function null
             SyncClipboardImeService().openImeSettings(context)
+            null
         }
 
         Function("openImePicker") {
-            val context = appContext.reactContext ?: return@Function
+            val context = appContext.reactContext ?: return@Function null
             SyncClipboardImeService().openImePicker(context)
+            null
         }
 
         AsyncFunction("hasImeClipboardText") { promise: Promise ->

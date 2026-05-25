@@ -16,7 +16,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
-import android.view.inputmethod.InputMethodService
+import android.inputmethodservice.InputMethodService
 import android.view.inputmethod.InputMethodSubtype
 import android.widget.LinearLayout
 import android.widget.TextView
