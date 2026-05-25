@@ -8,7 +8,9 @@ version = '1.0.0'
 
 android {
   namespace "expo.modules.clipboardime"
+  compileSdk 35
   defaultConfig {
+    minSdk 24
     versionCode 1
     versionName "1.0.0"
   }

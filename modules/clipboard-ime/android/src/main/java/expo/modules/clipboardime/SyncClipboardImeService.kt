@@ -255,7 +255,7 @@ class SyncClipboardImeService : InputMethodService() {
             val file = File(filesDir, CLIP_FILE_NAME)
             if (file.exists()) {
                 val text = file.readText()
-                text.ifEmpty { null }
+                if (text.isEmpty()) null else text
             } else null
         } catch (_: Exception) {
             null
