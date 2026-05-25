@@ -253,7 +253,10 @@ class SyncClipboardImeService : InputMethodService() {
     fun readCachedClipText(): String? {
         return try {
             val file = File(filesDir, CLIP_FILE_NAME)
-            if (file.exists()) file.readText().ifEmpty { null } else null
+            if (file.exists()) {
+                val text = file.readText()
+                text.ifEmpty { null }
+            } else null
         } catch (_: Exception) {
             null
         }
