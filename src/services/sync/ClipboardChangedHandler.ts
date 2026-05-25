@@ -134,6 +134,11 @@ class ClipboardChangedHandler {
 
     try {
       await this.copyToLocalClipboard(content);
+
+      if (content.type === 'Image' && content.profileHash) {
+        historyService.softDeleteItem(content.profileHash).catch(() => {});
+      }
+
       if (Platform.OS === 'android') {
         const preview = this.getContentPreview(content);
         updateForegroundNotification(`已下载: ${preview}`);
