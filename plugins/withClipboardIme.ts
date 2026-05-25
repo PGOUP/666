@@ -1,8 +1,4 @@
-import {
-  ConfigPlugin,
-  withAndroidManifest,
-  createRunOncePlugin,
-} from 'expo/config-plugins';
+import { ConfigPlugin, withAndroidManifest, createRunOncePlugin } from 'expo/config-plugins';
 
 const IME_SERVICE_CLASS = 'expo.modules.clipboardime.SyncClipboardImeService';
 
@@ -67,8 +63,4 @@ const withClipboardIme: ConfigPlugin = (config) => {
   });
 };
 
-export default createRunOncePlugin(
-  withClipboardIme,
-  'withClipboardIme',
-  '1.0.0'
-);
+export default createRunOncePlugin(withClipboardIme, 'withClipboardIme', '1.0.0');

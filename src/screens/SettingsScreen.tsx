@@ -625,7 +625,10 @@ export const SettingsScreen = () => {
     setLocalImeClipboardEnabled(enabled);
     try {
       await setEnableImeClipboard(enabled);
-      showMessage(enabled ? '已启用 IME 输入法获取剪贴板' : '已禁用 IME 输入法获取剪贴板', 'success');
+      showMessage(
+        enabled ? '已启用 IME 输入法获取剪贴板' : '已禁用 IME 输入法获取剪贴板',
+        'success'
+      );
     } catch (error: unknown) {
       setLocalImeClipboardEnabled(!enabled);
       showMessage(error instanceof Error ? error.message : '设置失败', 'error');
@@ -1818,9 +1821,7 @@ export const SettingsScreen = () => {
                   >
                     后台时通过 IME 输入法获取剪贴板
                   </Text>
-                  <Text
-                    style={[styles.settingDescription, { color: theme.colors.success }]}
-                  >
+                  <Text style={[styles.settingDescription, { color: theme.colors.success }]}>
                     推荐：利用输入法特权，真正无感后台同步
                   </Text>
                 </View>

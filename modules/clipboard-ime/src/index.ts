@@ -25,9 +25,7 @@ interface ClipboardImeModuleInterface {
   hasImeClipboardImage(): Promise<boolean>;
   getImeClipboardText(): Promise<string>;
   getImeClipboardImageUri(): Promise<string | null>;
-  saveImeClipboardImageToFile(
-    destDirPath: string
-  ): Promise<ImeClipboardImageResult | null>;
+  saveImeClipboardImageToFile(destDirPath: string): Promise<ImeClipboardImageResult | null>;
 }
 
 // @ts-ignore - 忽略类型错误，优先保证构建通过
